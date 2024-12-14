@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - StormBots</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">StormBots</div>
+        <nav class="navbar">
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="beneficios.html">Benefícios</a>
+            <a href="contato.html" class="active">Contato</a>
+        </nav>
+    </header>
+
+    <section class="contato">
+        <h2>Entre em Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
