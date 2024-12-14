@@ -3,77 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="StormBots - Crie sua experiência no Discord com bots personalizados.">
-  <title>StormBots - Bots do Discord</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="StormBots - Bots do Discord Personalizados e Poderosos">
+  <title>StormBots - Revolucione seu Discord</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
+  <!-- Header -->
   <header class="header">
-    <div class="logo">
-      <h1>StormBots</h1>
+    <div class="container">
+      <h1 class="logo">StormBots</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#bots">Bots</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="nav">
-      <ul>
-        <li><a href="#home">Início</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#shop">Loja</a></li>
-        <li><a href="#contact">Contato</a></li>
-      </ul>
-    </nav>
   </header>
 
+  <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-content">
-      <h2 data-aos="fade-up">Transforme seu servidor com bots incríveis!</h2>
-      <p data-aos="fade-up" data-aos-delay="200">Bots para automação, moderação e diversão no seu servidor do Discord.</p>
-      <a href="#shop" class="cta-btn" data-aos="fade-up" data-aos-delay="400">Explore os Bots</a>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h2 data-aos="fade-up">Bots que revolucionam seu servidor</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+          Automação, diversão e inovação em um só lugar. Experimente o futuro do Discord.
+        </p>
+        <a href="#bots" class="cta-btn" data-aos="fade-up" data-aos-delay="400">Explorar Bots</a>
+      </div>
     </div>
   </section>
 
+  <!-- About Section -->
   <section id="about" class="about">
-    <div class="about-content">
-      <h2 data-aos="fade-left">Sobre os nossos Bots</h2>
-      <p data-aos="fade-left" data-aos-delay="200">Oferecemos uma ampla gama de bots personalizados para diferentes funções, como moderação, música, games e muito mais. Tudo feito para tornar seu servidor único.</p>
+    <div class="container">
+      <h2 data-aos="fade-right">Por que escolher StormBots?</h2>
+      <p data-aos="fade-right" data-aos-delay="200">
+        Com anos de experiência, criamos bots personalizados para funções essenciais no Discord. 
+        Seja para moderação, música, jogos ou sistemas avançados, temos o que você precisa.
+      </p>
     </div>
   </section>
 
-  <section id="shop" class="shop">
-    <h2 data-aos="fade-up">Nossos Bots</h2>
-    <div class="products">
-      <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
-        <img src="bot1.png" alt="Bot 1">
-        <h3>Bot de Moderação</h3>
-        <p>Automatize a moderação do seu servidor.</p>
-        <button class="buy-btn">Comprar Agora</button>
-      </div>
-      <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
-        <img src="bot2.png" alt="Bot 2">
-        <h3>Bot Musical</h3>
-        <p>Traga música e diversão para o seu servidor.</p>
-        <button class="buy-btn">Comprar Agora</button>
-      </div>
-      <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
-        <img src="bot3.png" alt="Bot 3">
-        <h3>Bot de Jogos</h3>
-        <p>Adicione jogos interativos para seus membros.</p>
-        <button class="buy-btn">Comprar Agora</button>
+  <!-- Bots Section -->
+  <section id="bots" class="bots">
+    <div class="container">
+      <h2 data-aos="fade-up">Conheça nossos Bots</h2>
+      <div class="bot-cards">
+        <div class="bot-card" data-aos="flip-left">
+          <img src="bot1.png" alt="Bot de Moderação">
+          <h3>Bot de Moderação</h3>
+          <p>Mantenha seu servidor organizado com automações avançadas.</p>
+          <button class="buy-btn">Saiba Mais</button>
+        </div>
+        <div class="bot-card" data-aos="flip-left" data-aos-delay="200">
+          <img src="bot2.png" alt="Bot de Música">
+          <h3>Bot de Música</h3>
+          <p>Traga playlists e música em alta qualidade para o seu servidor.</p>
+          <button class="buy-btn">Saiba Mais</button>
+        </div>
+        <div class="bot-card" data-aos="flip-left" data-aos-delay="400">
+          <img src="bot3.png" alt="Bot de Jogos">
+          <h3>Bot de Jogos</h3>
+          <p>Adicione jogos interativos e diversão sem limites.</p>
+          <button class="buy-btn">Saiba Mais</button>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="contact">
-    <h2>Contato</h2>
-    <form>
-      <input type="text" placeholder="Seu nome" required>
-      <input type="email" placeholder="Seu e-mail" required>
-      <textarea placeholder="Sua mensagem" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <div class="container">
+      <h2 data-aos="zoom-in">Entre em Contato</h2>
+      <form data-aos="zoom-in" data-aos-delay="200">
+        <input type="text" placeholder="Seu Nome" required>
+        <input type="email" placeholder="Seu Email" required>
+        <textarea placeholder="Sua Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
   </section>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="footer">
     <p>&copy; 2024 StormBots | Todos os direitos reservados.</p>
   </footer>
 
