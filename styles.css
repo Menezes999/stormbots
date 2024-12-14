@@ -45,8 +45,8 @@ header .logo img {
 }
 
 .menu-toggle .bar {
-    width: 15px;  /* Barras menores */
-    height: 2px;
+    width: 20px;  /* Barras menores */
+    height: 3px;
     margin: 3px 0;
     background-color: #fff;  /* Barras brancas */
 }
