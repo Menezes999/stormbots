@@ -33,7 +33,7 @@ header {
 }
 
 header .logo img {
-    width: 150px;
+    width: 50px;
     height: auto;
 }
 
@@ -45,9 +45,9 @@ header .logo img {
 }
 
 .menu-toggle .bar {
-    width: 25px;  /* Barras menores */
-    height: 4px;
-    margin: 5px 0;
+    width: 15px;  /* Barras menores */
+    height: 2px;
+    margin: 3px 0;
     background-color: #fff;  /* Barras brancas */
 }
 
