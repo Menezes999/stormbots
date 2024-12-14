@@ -37,12 +37,12 @@ startOfferCountdown(60);
 // Script da gaveta lateral
 const menuToggle = document.getElementById('menu-toggle');
 const sideDrawer = document.getElementById('side-drawer');
+const closeBtn = document.getElementById('close-btn');
 
 menuToggle.addEventListener('click', () => {
-    const currentRight = sideDrawer.style.right;
-    if (currentRight === '0px') {
-        sideDrawer.style.right = '-250px'; // Fecha a gaveta lateral
-    } else {
-        sideDrawer.style.right = '0px'; // Abre a gaveta lateral
-    }
+    sideDrawer.classList.add('active');
+});
+
+closeBtn.addEventListener('click', () => {
+    sideDrawer.classList.remove('active');
 });
