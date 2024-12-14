@@ -75,6 +75,72 @@ header nav a:hover {
     background-color: #9b59ff;
 }
 
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.hero-content h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+.hero-content .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #9b59ff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.hero-content .btn:hover {
+    background-color: #7a4bd3;
+}
+.hero-image img {
+    width: 400px;
+    height: auto;
+}
+
+/* Destaque */
+.destaque {
+    background-color: #111;
+    text-align: center;
+    padding: 50px;
+    margin-top: 30px;
+}
+.destaque h2 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+.destaque p {
+    font-size: 1.5rem;
+    color: #fff;
+}
+.destaque .cta-timer {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.destaque .btn.neon {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #9b59ff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.destaque .btn.neon:hover {
+    background-color: #7a4bd3;
+}
+
 /* Responsividade: Quando a tela for pequena (ex. mobile) */
 @media (max-width: 768px) {
     .menu-toggle {
