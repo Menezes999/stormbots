@@ -36,3 +36,16 @@ function startCountdown(durationInMinutes) {
 
 // Inicia o timer com 1 hora (60 minutos)
 startCountdown(60);
+
+// Script para abrir e fechar a gaveta lateral
+const menuToggle = document.getElementById('menu-toggle');
+const sideDrawer = document.getElementById('side-drawer');
+
+menuToggle.addEventListener('click', () => {
+    const currentRight = sideDrawer.style.right;
+    if (currentRight === '0px') {
+        sideDrawer.style.right = '-250px'; // Fecha a gaveta
+    } else {
+        sideDrawer.style.right = '0px'; // Abre a gaveta
+    }
+});
