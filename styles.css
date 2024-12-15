@@ -124,7 +124,7 @@ header .logo img {
 
 .hero-content .btn {
     padding: 10px 20px;
-    background-color: #9b59ff;
+    background-color: #7a4bd3;  /* Cor roxa mais escura */
     color: #fff;
     font-weight: bold;
     border-radius: 5px;
@@ -132,7 +132,7 @@ header .logo img {
 }
 
 .hero-content .btn:hover {
-    background-color: #7a4bd3;
+    background-color: #6a3eb4;
 }
 
 .overlay {
@@ -170,7 +170,7 @@ header .logo img {
 
 .offer .btn.neon {
     padding: 12px 30px;
-    background-color: #9b59ff;
+    background-color: #7a4bd3;  /* Cor roxa mais escura */
     color: #fff;
     font-weight: bold;
     border-radius: 5px;
@@ -178,7 +178,7 @@ header .logo img {
 }
 
 .offer .btn.neon:hover {
-    background-color: #7a4bd3;
+    background-color: #6a3eb4;
 }
 
 /* Popup no Rodapé */
@@ -188,7 +188,7 @@ header .logo img {
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
-    background-color: #9b59ff;
+    background-color: #7a4bd3;  /* Cor roxa mais escura */
     color: #fff;
     font-size: 1.2rem;
     border-radius: 5px;
@@ -202,7 +202,7 @@ header .logo img {
 }
 
 .popup-btn:hover {
-    background-color: #7a4bd3;
+    background-color: #6a3eb4;
 }
 
 .popup-btn .arrow {
