@@ -1,16 +1,16 @@
-// Exibir e ocultar a gaveta lateral
+
 function toggleDrawer() {
     const sideDrawer = document.getElementById('sideDrawer');
     sideDrawer.classList.toggle('active');
 }
 
-// Ir para a seção da oferta
+
 function scrollToOffer() {
     const offerSection = document.getElementById('offer');
     offerSection.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Esconder o botão "Veja nossa oferta" ao chegar ao final da página
+
 document.addEventListener('scroll', () => {
     const popupBtn = document.getElementById('popupBtn');
     const footer = document.querySelector('footer');
@@ -24,9 +24,9 @@ document.addEventListener('scroll', () => {
     }
 });
 
-// Configuração do cronômetro
+
 const timerElement = document.getElementById('timer');
-const initialTimeInMinutes = 10; // Tempo inicial da oferta (10 minutos)
+const initialTimeInMinutes = 10; 
 const initialTimeInSeconds = initialTimeInMinutes * 60;
 
 function startTimer() {
@@ -36,7 +36,7 @@ function startTimer() {
     if (savedTime) {
         endTime = parseInt(savedTime, 10);
     } else {
-        endTime = Date.now() + initialTimeInSeconds * 1000; // Tempo futuro em milissegundos
+        endTime = Date.now() + initialTimeInSeconds * 1000; 
         localStorage.setItem('offerEndTime', endTime);
     }
 
@@ -46,7 +46,7 @@ function startTimer() {
 
         if (timeLeft === 0) {
             timerElement.textContent = "Oferta Expirada!";
-            localStorage.removeItem('offerEndTime'); // Remove o cronômetro do localStorage
+            localStorage.removeItem('offerEndTime'); 
             return;
         }
 
