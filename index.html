@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>StormBots - Hospedagem de Bots</title>
+    <title>StormBots</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
     <!-- Header -->
@@ -25,40 +24,48 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Hospede seus bots de forma rápida e gratuita</h1>
-            <p>Desempenho confiável, facilidade de uso e suporte dedicado para o seu crescimento.</p>
-            <a href="#features" class="btn">Conheça mais</a>
+            <h1>Automatize seu servidor Discord</h1>
+            <p>Com as melhores soluções para automação, prontos para você utilizar!</p>
+            <a href="#offer" class="btn">Saiba mais</a>
+            <!-- Novo botão -->
+            <a href="#host" class="btn-host">Hospede Agora</a>
         </div>
     </section>
 
-    <!-- Benefícios -->
-    <section id="features" class="features">
-        <h2>Por que escolher StormBots?</h2>
+    <!-- Seção de Benefícios -->
+    <section class="features">
+        <h2>Benefícios</h2>
         <div class="features-grid">
             <div class="feature-item">
-                <img src="icon-performance.png" alt="Desempenho">
-                <h3>Desempenho Inigualável</h3>
-                <p>Infraestrutura robusta para garantir máxima eficiência aos seus bots.</p>
-            </div>
-            <div class="feature-item">
-                <img src="icon-security.png" alt="Segurança">
-                <h3>Segurança</h3>
-                <p>Proteção avançada para manter seus dados e bots seguros.</p>
-            </div>
-            <div class="feature-item">
-                <img src="icon-support.png" alt="Suporte">
+                <img src="support-icon.png" alt="Suporte 24/7">
                 <h3>Suporte 24/7</h3>
-                <p>Equipe especializada sempre disponível para ajudar.</p>
+                <p>Nosso time está sempre disponível para ajudar.</p>
+            </div>
+            <div class="feature-item">
+                <img src="reliable-icon.png" alt="Alta Confiabilidade">
+                <h3>Alta Confiabilidade</h3>
+                <p>Sistemas robustos que garantem uptime 99,9%.</p>
+            </div>
+            <div class="feature-item">
+                <img src="scalability-icon.png" alt="Escalabilidade">
+                <h3>Escalabilidade</h3>
+                <p>Escalamos conforme o crescimento do seu servidor.</p>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta">
-        <h2>Pronto para hospedar seu bot?</h2>
-        <p>Aproveite nossa hospedagem gratuita e eleve o nível do seu servidor.</p>
-        <a href="#start" class="btn neon">Começar agora</a>
+    <!-- Oferta Exclusiva -->
+    <section id="offer" class="offer">
+        <h2>Oferta Exclusiva</h2>
+        <p>Não perca essa oportunidade incrível! Garanta já a sua hospedagem gratuita.</p>
+        <div id="timer" class="timer">Carregando...</div>
+        <a href="#" class="btn neon">Adquira agora</a>
     </section>
+
+    <!-- Popup no rodapé -->
+    <div class="popup-btn" onclick="scrollToOffer()">
+        <span>Veja nossa oferta exclusiva!</span>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -69,9 +76,9 @@
     <div id="sideDrawer" class="side-drawer">
         <div class="close-btn" onclick="toggleDrawer()">×</div>
         <div class="side-drawer-content">
-            <a href="#features">Benefícios</a>
-            <a href="#cta">Começar</a>
-            <a href="#">Contato</a>
+            <a href="#">Início</a>
+            <a href="#offer">Oferta</a>
+            <a href="#">Benefícios</a>
         </div>
     </div>
 
