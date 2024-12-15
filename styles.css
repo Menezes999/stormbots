@@ -28,8 +28,11 @@ header {
     align-items: center;
     padding: 20px 50px;
     background-color: transparent;  /* Fundo transparente */
-    position: relative;
-    z-index: 10;
+    position: absolute;  /* Ajuste para o header ficar acima do banner */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;  /* Garante que o header fique acima do banner */
 }
 
 header .logo img {
