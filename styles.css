@@ -10,20 +10,14 @@ body {
     background-color: #000;  /* Cor de fundo preta */
     color: #fff;  /* Texto branco */
     font-size: 16px;
-    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
     color: #fff;
-    transition: color 0.3s ease-in-out;
 }
 
-a:hover {
-    color: #9b59ff;
-}
-
-h1, h2, h3 {
+h1, h2 {
     font-family: 'Helvetica', sans-serif;
 }
 
@@ -34,14 +28,12 @@ header {
     align-items: center;
     padding: 20px 50px;
     background-color: transparent;  /* Fundo transparente */
-    position: absolute;
-    top: 0;
-    width: 100%;
+    position: relative;
     z-index: 10;
 }
 
 header .logo img {
-    width: 60px;
+    width: 50px;
     height: auto;
 }
 
@@ -53,10 +45,10 @@ header .logo img {
 }
 
 .menu-toggle .bar {
-    width: 25px;
+    width: 20px;  /* Barras menores */
     height: 3px;
-    margin: 4px 0;
-    background-color: #fff;
+    margin: 3px 0;
+    background-color: #fff;  /* Barras brancas */
 }
 
 /* Gaveta Lateral */
@@ -66,9 +58,9 @@ header .logo img {
     right: 0;
     width: 250px;
     height: 100%;
-    background-color: #111;  /* Fundo preto com opacidade leve */
+    background-color: #000;  /* Fundo preto */
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out;
     z-index: 100;
     transform: translateX(100%);
 }
@@ -79,7 +71,7 @@ header .logo img {
 
 .side-drawer .close-btn {
     font-size: 2rem;
-    color: #fff;
+    color: #fff;  /* Cor do "X" branco */
     padding: 15px;
     cursor: pointer;
     text-align: right;
@@ -114,126 +106,156 @@ header .logo img {
     align-items: center;
     color: #fff;
     text-align: center;
-    transition: opacity 0.5s ease-out;
-    z-index: 1;
 }
 
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Sobreposição escura */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);  /* Cor preta com 60% de opacidade */
     z-index: 1;
 }
 
 .hero-content {
+    z-index: 2;  /* Garante que o conteúdo da seção hero fique acima da sobreposição */
     max-width: 80%;
-    z-index: 2;  /* Garante que o conteúdo da seção hero fique acima da imagem */
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin: 20px 0;
 }
 
 .hero-content .btn {
-    padding: 12px 30px;
-    background-color: transparent;
-    border: 2px solid #9b59ff;
+    padding: 10px 20px;
+    background-color: #9b59ff;
     color: #fff;
     font-weight: bold;
-    border-radius: 30px;
-    transition: all 0.3s ease;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .hero-content .btn:hover {
-    background-color: #9b59ff;
-    color: #000;
-}
-
-/* Botão Hospedar Agora */
-.hero-content .btn-host {
-    margin-top: 20px;
-    padding: 12px 30px;
-    background-color: #9b59ff;
-    color: #000;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-}
-
-.hero-content .btn-host:hover {
     background-color: #7a4bd3;
 }
 
-/* Benefícios */
-.features {
-    padding: 60px 20px;
+/* Oferta Exclusiva */
+.offer {
     text-align: center;
-    background-color: #111;
+    padding: 50px 20px;
+    background-color: #000;  /* Fundo preto */
 }
 
-.features h2 {
+.offer h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
+.offer p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.offer .timer {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.offer .btn.neon {
+    padding: 12px 30px;
+    background-color: #9b59ff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.offer .btn.neon:hover {
+    background-color: #7a4bd3;
+}
+
+/* Popup no rodapé */
+.popup-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: 2px solid #9b59ff;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    color: #9b59ff;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 20;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.popup-btn:hover {
+    background-color: #9b59ff;
+    color: #fff;
+}
+
+/* Features */
+.features {
+    background-color: #000;  /* Fundo preto */
+    color: #fff;  /* Texto branco */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .feature-item {
-    text-align: center;
+    width: 30%;
+    background-color: #222;  /* Fundo escuro para cada item */
     padding: 20px;
-    background-color: #1a1a1a;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 .feature-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    border: 2px solid #9b59ff;
 }
 
 .feature-item img {
-    width: 60px;
-    margin-bottom: 20px;
-    animation: bounce 1.5s infinite;
+    width: 50px;
+    height: auto;
+    margin-bottom: 15px;
 }
 
 .feature-item h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    color: #9b59ff;
 }
 
-/* Animações */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+.feature-item p {
+    font-size: 1.2rem;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #000;
+    background-color: #000;  /* Fundo preto */
 }
 
 footer p {
@@ -250,11 +272,25 @@ footer p {
         display: flex;
     }
 
-    /* Hero: Botões empilhados */
-    .hero-content .btn, 
-    .hero-content .btn-host {
-        display: block;
-        width: 100%;  /* Botões ocupam toda a largura no celular */
-        margin: 10px 0;  /* Espaçamento entre os botões */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-content .btn {
+        padding: 10px 15px;
+    }
+
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin-bottom: 20px;
     }
 }
