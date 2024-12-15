@@ -118,10 +118,6 @@ header .logo img {
     z-index: 1;
 }
 
-.hero.scrolled {
-    opacity: 0; /* Efeito de desvanecimento com o scroll */
-}
-
 .hero-overlay {
     position: absolute;
     top: 0;
