@@ -1,4 +1,4 @@
-
+/* Resetando estilos padrão */
 * {
     margin: 0;
     padding: 0;
@@ -7,98 +7,47 @@
 }
 
 body {
-    background-color: #000;  
-    color: #fff;  
+    background-color: #000;  /* Cor de fundo preta */
+    color: #fff;  /* Texto branco */
     font-size: 16px;
+    -webkit-touch-callout: none; /* Bloqueia menu de contexto */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-h1, h2 {
-    font-family: 'Helvetica', sans-serif;
-}
-
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: transparent;  
-    position: absolute;
-    top: 0;
-    left: 0;
+    background-color: transparent;
+    position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
 }
 
-header .logo img {
+.logo img {
     width: 50px;
     height: auto;
+    pointer-events: none;
+    -webkit-user-drag: none;
 }
 
 .menu-toggle {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    z-index: 20;
+    z-index: 200;
 }
 
 .menu-toggle .bar {
-    width: 25px;
+    width: 20px;
     height: 3px;
-    margin: 4px 0;
+    margin: 3px 0;
     background-color: #fff;
 }
-
-
-.side-drawer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #000;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease-in-out;
-    z-index: 100;
-    transform: translateX(100%);
-}
-
-.side-drawer.active {
-    transform: translateX(0);
-}
-
-.side-drawer .close-btn {
-    font-size: 2rem;
-    color: #fff;
-    padding: 15px;
-    cursor: pointer;
-    text-align: right;
-}
-
-.side-drawer-content {
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-    align-items: center;
-}
-
-.side-drawer-content a {
-    padding: 15px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: #fff;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.side-drawer-content a:hover {
-    background-color: #9b59ff;
-}
-
 
 .hero {
     position: relative;
@@ -107,7 +56,6 @@ header .logo img {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
     text-align: center;
 }
 
@@ -117,12 +65,13 @@ header .logo img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
 }
 
 .hero-content {
-    z-index: 2;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content h1 {
@@ -138,21 +87,13 @@ header .logo img {
     padding: 10px 20px;
     background-color: transparent;
     color: #fff;
-    border: 2px solid #9b59ff;
-    font-weight: bold;
+    border: 2px solid #fff;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
 }
-
-.hero-content .btn:hover {
-    background-color: #9b59ff;
-    color: #000;
-}
-
 
 .offer {
-    text-align: center;
     padding: 50px 20px;
+    text-align: center;
     background-color: #000;
 }
 
@@ -174,63 +115,27 @@ header .logo img {
 
 .offer .btn.neon {
     padding: 12px 30px;
-    background-color: #9b59ff;
+    background-color: #5d3b99;
     color: #fff;
     font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s;
 }
-
-.offer .btn.neon:hover {
-    background-color: #7a4bd3;
-}
-
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000;
-}
-
-footer p {
-    font-size: 1rem;
-}
-
 
 .popup-btn {
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    padding: 10px 20px;
     background-color: transparent;
     color: #fff;
-    border: 2px solid #9b59ff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border: 2px solid #fff;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    z-index: 1000;
-}
-
-.popup-btn:hover {
-    background-color: #9b59ff;
-    color: #000;
+    gap: 10px;
 }
 
 .popup-btn.hidden {
     display: none;
-}
-
-.arrow {
-    font-size: 1.2rem;
-}
-
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
 }
