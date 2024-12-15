@@ -114,6 +114,12 @@ header .logo img {
     align-items: center;
     color: #fff;
     text-align: center;
+    transition: opacity 0.5s ease-out;
+    z-index: 1;
+}
+
+.hero.scrolled {
+    opacity: 0; /* Efeito de desvanecimento com o scroll */
 }
 
 .hero-overlay {
@@ -156,6 +162,21 @@ header .logo img {
     color: #000;
 }
 
+/* Botão Hospedar Agora */
+.hero-content .btn-host {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #9b59ff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.hero-content .btn-host:hover {
+    background-color: #7a4bd3;
+}
+
 /* Benefícios */
 .features {
     padding: 60px 20px;
@@ -181,51 +202,35 @@ header .logo img {
     background-color: #1a1a1a;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .feature-item:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid #9b59ff;
 }
 
 .feature-item img {
     width: 60px;
     margin-bottom: 20px;
+    animation: bounce 1.5s infinite;
 }
 
 .feature-item h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
+    color: #9b59ff;
 }
 
-/* Call to Action */
-.cta {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #222;
-}
-
-.cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.cta p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.cta .btn.neon {
-    padding: 12px 30px;
-    background-color: #9b59ff;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: background-color 0.3s;
-}
-
-.cta .btn.neon:hover {
-    background-color: #7a4bd3;
+/* Animações */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Footer */
