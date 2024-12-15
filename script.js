@@ -1,19 +1,32 @@
-
-// Função para abrir/fechar a gaveta lateral
+// Alternar gaveta lateral
 function toggleDrawer() {
-    const sideDrawer = document.getElementById('side-drawer');
-    sideDrawer.classList.toggle('active');
+    const drawer = document.getElementById('sideDrawer');
+    drawer.classList.toggle('active');
 }
 
-// Função para rolar até a seção de oferta
+// Rolar até a seção de oferta
 function scrollToOffer() {
     document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
 }
 
-// Timer da Oferta Exclusiva
-window.onload = function() {
+// Ocultar botão "Veja nossa oferta" ao alcançar a seção de oferta
+window.addEventListener('scroll', function () {
+    const popupBtn = document.getElementById('popupBtn');
+    const offerSection = document.getElementById('offer');
+    const offerTop = offerSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (offerTop <= windowHeight / 2) {
+        popupBtn.style.display = 'none';
+    } else {
+        popupBtn.style.display = 'flex';
+    }
+});
+
+// Contagem regressiva
+window.onload = function () {
     const timerElement = document.getElementById('timer');
-    const targetDate = new Date().getTime() + 1000 * 60 * 60; // 1 hora a partir de agora
+    const targetDate = new Date().getTime() + 1000 * 60 * 60;
 
     function updateTimer() {
         const now = new Date().getTime();
