@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>StormBots</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,44 +20,43 @@
         </div>
     </header>
 
-    <!-- Gaveta Lateral -->
-    <div class="side-drawer" id="side-drawer">
-        <div class="close-btn" onclick="toggleDrawer()">&times;</div>
-        <div class="side-drawer-content">
-            <a href="#home">Início</a>
-            <a href="#benefits">Benefícios</a>
-            <a href="#offer">Oferta Exclusiva</a>
-        </div>
-    </div>
-
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Automatize seu Discord com StormBots</h1>
-            <p>Com bots eficientes e personalizados para suas necessidades.</p>
+            <h1>Automatize seu servidor Discord</h1>
+            <p>Com os melhores bots para o seu servidor, prontos para uso!</p>
             <a href="#offer" class="btn">Saiba mais</a>
         </div>
-        <div class="overlay"></div> <!-- Fundo mais escuro -->
     </section>
 
     <!-- Oferta Exclusiva -->
-    <section class="offer" id="offer">
-        <h2>Oferta Exclusiva!</h2>
-        <p>Não perca a chance de automatizar seu Discord com os melhores bots do mercado.</p>
-        <div class="timer" id="timer"></div>
-        <a href="#" class="btn neon">Compre Agora</a>
+    <section id="offer" class="offer">
+        <h2>Oferta Exclusiva</h2>
+        <p>Não perca essa oportunidade incrível! Garanta já o seu bot!</p>
+        <div id="timer" class="timer">Carregando...</div>
+        <a href="#" class="btn neon">Adquira agora</a>
     </section>
 
     <!-- Popup no rodapé -->
     <div class="popup-btn" onclick="scrollToOffer()">
         <span>Veja nossa oferta exclusiva!</span>
-        <span class="arrow">&#8595;</span>  <!-- Seta para baixo -->
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 StormBots. Todos os direitos reservados.</p>
+        <p>© 2024 StormBots. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Side Drawer -->
+    <div id="sideDrawer" class="side-drawer">
+        <div class="close-btn" onclick="toggleDrawer()">×</div>
+        <div class="side-drawer-content">
+            <a href="#">Início</a>
+            <a href="#offer">Oferta</a>
+            <a href="#">Benefícios</a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
