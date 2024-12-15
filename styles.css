@@ -108,9 +108,21 @@ header .logo img {
     text-align: center;
 }
 
+/* Sobreposição preta com opacidade */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Preto com 60% de opacidade */
+    z-index: 1; /* Coloca a sobreposição acima do banner */
+}
+
+/* Conteúdo da seção hero */
 .hero-content {
     max-width: 80%;
-    z-index: 1;  /* Garante que o conteúdo da seção hero fique acima da imagem */
+    z-index: 2;  /* Garante que o conteúdo da seção hero fique acima da sobreposição */
 }
 
 .hero-content h1 {
