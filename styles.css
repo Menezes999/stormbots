@@ -249,4 +249,12 @@ footer p {
     .menu-toggle {
         display: flex;
     }
+
+    /* Hero: Botões empilhados */
+    .hero-content .btn, 
+    .hero-content .btn-host {
+        display: block;
+        width: 100%;  /* Botões ocupam toda a largura no celular */
+        margin: 10px 0;  /* Espaçamento entre os botões */
+    }
 }
