@@ -1,15 +1,15 @@
-// Alternar gaveta lateral
+
 function toggleDrawer() {
     const drawer = document.getElementById('sideDrawer');
     drawer.classList.toggle('active');
 }
 
-// Rolar até a seção de oferta
+
 function scrollToOffer() {
     document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
 }
 
-// Ocultar botão "Veja nossa oferta" ao alcançar a seção de oferta
+
 window.addEventListener('scroll', function () {
     const popupBtn = document.getElementById('popupBtn');
     const offerSection = document.getElementById('offer');
@@ -23,7 +23,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Contagem regressiva
+
 window.onload = function () {
     const timerElement = document.getElementById('timer');
     const targetDate = new Date().getTime() + 1000 * 60 * 60;
