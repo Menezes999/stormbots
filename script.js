@@ -1,33 +1,34 @@
-// Função para abrir/fechar o menu lateral
+// Função para abrir/fechar a gaveta lateral
 function toggleDrawer() {
-    const sideDrawer = document.getElementById('sideDrawer');
+    const sideDrawer = document.getElementById('side-drawer');
     sideDrawer.classList.toggle('active');
 }
 
-// Função para rolar a página até a seção de "Oferta"
+// Função para rolar até a seção de oferta
 function scrollToOffer() {
-    const offerSection = document.getElementById('offer');
-    offerSection.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('offer').scrollIntoView({ behavior: 'smooth' });
 }
 
-// Função para iniciar a contagem regressiva da oferta
+// Timer da Oferta Exclusiva
 window.onload = function() {
     const timerElement = document.getElementById('timer');
-    let offerTime = new Date().getTime() + 3600000;  // Oferta válida por 1 hora a partir de agora
+    const targetDate = new Date().getTime() + 1000 * 60 * 60; // 1 hora a partir de agora
 
     function updateTimer() {
-        const currentTime = new Date().getTime();
-        const timeLeft = offerTime - currentTime;
+        const now = new Date().getTime();
+        const timeRemaining = targetDate - now;
 
-        if (timeLeft <= 0) {
-            timerElement.innerHTML = 'Oferta Expirada!';
-        } else {
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60)) / 1000);
-            const seconds = Math.floor((timeLeft % 1000) / 100);
-            timerElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+        if (timeRemaining <= 0) {
+            timerElement.innerHTML = 'Oferta expirada';
+            return;
         }
+
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        timerElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
     }
 
-    setInterval(updateTimer, 1000);  // Atualiza o tempo a cada segundo
+    setInterval(updateTimer, 1000);
 };
