@@ -1,35 +1,33 @@
-// Temporizador para a oferta
-const offerTimer = document.getElementById("offer-timer");
+// Função para abrir/fechar o menu lateral
+function toggleDrawer() {
+    const sideDrawer = document.getElementById('sideDrawer');
+    sideDrawer.classList.toggle('active');
+}
 
-let deadline = new Date().getTime() + (24 * 60 * 60 * 1000); // 24 horas a partir de agora
+// Função para rolar a página até a seção de "Oferta"
+function scrollToOffer() {
+    const offerSection = document.getElementById('offer');
+    offerSection.scrollIntoView({ behavior: 'smooth' });
+}
 
-// Atualiza o temporizador a cada segundo
-let timerInterval = setInterval(function() {
-    let now = new Date().getTime();
-    let remainingTime = deadline - now;
+// Função para iniciar a contagem regressiva da oferta
+window.onload = function() {
+    const timerElement = document.getElementById('timer');
+    let offerTime = new Date().getTime() + 3600000;  // Oferta válida por 1 hora a partir de agora
 
-    if (remainingTime <= 0) {
-        clearInterval(timerInterval);
-        offerTimer.innerHTML = "Oferta Expirada!";
-    } else {
-        let hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-        
-        offerTimer.innerHTML = `Tempo Restante: ${hours}h ${minutes}m ${seconds}s`;
+    function updateTimer() {
+        const currentTime = new Date().getTime();
+        const timeLeft = offerTime - currentTime;
+
+        if (timeLeft <= 0) {
+            timerElement.innerHTML = 'Oferta Expirada!';
+        } else {
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            const seconds = Math.floor((timeLeft % 1000) / 100);
+            timerElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+        }
     }
-}, 1000);
 
-// Abrir a gaveta lateral
-const menuToggle = document.getElementById('menu-toggle');
-const sideDrawer = document.getElementById('side-drawer');
-const closeBtn = document.getElementById('close-btn');
-
-menuToggle.addEventListener('click', () => {
-    sideDrawer.classList.add('active');
-});
-
-// Fechar a gaveta lateral
-closeBtn.addEventListener('click', () => {
-    sideDrawer.classList.remove('active');
-});
+    setInterval(updateTimer, 1000);  // Atualiza o tempo a cada segundo
+};
