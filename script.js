@@ -1,8 +1,5 @@
+// Função para abrir e fechar a gaveta lateral
 function toggleDrawer() {
-    const drawer = document.getElementById('sideDrawer');
-    drawer.classList.toggle('active');
-}
-
-function scrollToSection() {
-    window.location.href = "hospedagem.html";
+    const drawer = document.getElementById("sideDrawer");
+    drawer.classList.toggle("active");
 }
