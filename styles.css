@@ -10,7 +10,7 @@ body {
     background-color: #000;
     color: #fff;
     font-size: 16px;
-    overflow-x: hidden; /* Prevenir rolagem horizontal */
+    overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
 /* Cabeçalho */
@@ -23,7 +23,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: transparent; /* Cabeçalho transparente */
+    background-color: transparent;
     z-index: 1000;
 }
 
@@ -49,17 +49,17 @@ header .logo img {
 .side-drawer {
     position: fixed;
     top: 0;
-    right: -250px; /* Começa fora da tela */
+    right: -250px; /* Inicialmente fora da tela */
     width: 250px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 1100; /* Assegurando que a gaveta tenha uma prioridade maior */
-    transition: right 0.3s ease-in-out; /* Animação suave */
+    z-index: 1100;
+    transition: right 0.3s ease-in-out; /* Animação para abrir */
 }
 
 .side-drawer.open {
-    right: 0; /* Quando a gaveta abrir */
+    right: 0; /* Quando abre, move para a tela */
 }
 
 .side-drawer .close-btn {
@@ -81,7 +81,7 @@ header .logo img {
     color: #9b59ff;
     font-size: 1.2rem;
     font-weight: bold;
-    text-decoration: none; /* Remover sublinhado */
+    text-decoration: none; /* Remove o sublinhado */
 }
 
 /* Seção Hero */
@@ -134,7 +134,7 @@ header .logo img {
     border-radius: 5px;
     border: 2px solid #9b59ff;
     transition: background-color 0.3s;
-    text-decoration: none; /* Remover sublinhado */
+    text-decoration: none;
 }
 
 .hero-buttons .btn:hover {
