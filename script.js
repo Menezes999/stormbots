@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeBtn = document.querySelector('.close-btn');
 
     // Abrir a gaveta lateral
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', function() {
         sideDrawer.classList.add('open');
     });
 
     // Fechar a gaveta lateral
-    closeBtn.addEventListener('click', () => {
+    closeBtn.addEventListener('click', function() {
         sideDrawer.classList.remove('open');
     });
 });
