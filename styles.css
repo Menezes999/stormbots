@@ -7,32 +7,23 @@
 }
 
 body {
-    background-color: #000;  /* Cor de fundo preta */
-    color: #fff;  /* Texto branco */
+    background-color: #000;
+    color: #fff;
     font-size: 16px;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-h1, h2 {
-    font-family: 'Helvetica', sans-serif;
-}
-
-/* Header */
+/* Cabeçalho */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: transparent;  /* Fundo transparente */
-    position: fixed;  /* Fixa a parte de cima */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;  /* Z-index alto para garantir que fique sobre outras seções */
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
 }
 
 header .logo img {
@@ -53,7 +44,45 @@ header .logo img {
     background-color: #fff;
 }
 
-/* Hero Section */
+/* Gaveta Lateral */
+.side-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    transition: right 0.3s ease;
+}
+
+.side-drawer.open {
+    right: 0;
+}
+
+.side-drawer .close-btn {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    text-align: right;
+    padding: 10px;
+}
+
+.side-drawer-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-drawer-content a {
+    color: #9b59ff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Seção Hero */
 .hero {
     position: relative;
     height: 100vh;
@@ -71,7 +100,7 @@ header .logo img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);  /* Cor preta com opacidade */
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 0;
 }
 
@@ -111,62 +140,20 @@ header .logo img {
 }
 
 .hero-buttons .btn.purple {
-    background-color: #9b59ff;  /* Botão roxo */
+    background-color: #9b59ff;
     color: #fff;
     border: none;
 }
 
 .hero-buttons .btn.purple:hover {
-    background-color: #6a39cc;  /* Roxo mais escuro ao passar o mouse */
+    background-color: #6a39cc;
 }
 
-/* Footer */
+/* Rodapé */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #000;
-}
-
-footer p {
-    font-size: 1rem;
-}
-
-/* Side Drawer */
-.side-drawer {
-    position: fixed;
-    top: 0;
-    right: -100%;  /* Escondido inicialmente */
-    width: 250px;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);  /* Fundo preto com leve transparência */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 1100;
-    transition: right 0.3s ease;
-}
-
-.side-drawer.open {
-    right: 0;  /* Aparece ao abrir */
-}
-
-.side-drawer .close-btn {
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-    text-align: right;
-    padding: 10px;
-}
-
-.side-drawer-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.side-drawer-content a {
-    color: #9b59ff;
-    font-size: 1.2rem;
-    font-weight: bold;
 }
 
 /* Responsividade */
