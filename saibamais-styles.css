@@ -26,8 +26,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
-    background-color: transparent;
+    padding: 20px 50px;
+    background-color: transparent; /* Mesmo estilo da página inicial */
     position: fixed;
     top: 0;
     left: 0;
@@ -36,20 +36,20 @@ header {
 }
 
 header .logo img {
-    width: 50px; /* Mesmo tamanho da página inicial */
+    width: 50px; /* Tamanho igual ao da página inicial */
     height: auto;
 }
 
 .menu-toggle {
     display: flex;
     flex-direction: column;
-    gap: 5px;
     cursor: pointer;
 }
 
 .menu-toggle .bar {
-    width: 25px;
+    width: 20px; /* Igual à página inicial */
     height: 3px;
+    margin: 3px 0;
     background-color: #fff;
     transition: 0.3s;
 }
@@ -63,7 +63,6 @@ header .logo img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: -10px; /* Remove o espaço extra acima da página */
 }
 
 .hero-overlay {
@@ -94,7 +93,7 @@ header .logo img {
 /* Botão de rolar */
 .scroll-btn {
     position: absolute;
-    bottom: 20px;
+    bottom: 80px; /* Ajustado para ficar mais visível */
     left: 50%;
     transform: translateX(-50%);
 }
