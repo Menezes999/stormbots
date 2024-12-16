@@ -10,6 +10,7 @@ body {
     background-color: #000;
     color: #fff;
     font-size: 16px;
+    overflow-x: hidden; /* Prevenir rolagem horizontal */
 }
 
 /* Cabeçalho */
@@ -48,17 +49,17 @@ header .logo img {
 .side-drawer {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -250px; /* Começa fora da tela */
     width: 250px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1100; /* Assegurando que a gaveta tenha uma prioridade maior */
-    transition: right 0.3s ease; /* Animação suave */
+    transition: right 0.3s ease-in-out; /* Animação suave */
 }
 
 .side-drawer.open {
-    right: 0; /* Move a gaveta para a direita */
+    right: 0; /* Quando a gaveta abrir */
 }
 
 .side-drawer .close-btn {
