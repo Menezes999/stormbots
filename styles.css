@@ -1,6 +1,87 @@
-/* Estilização existente da página inicial permanece intacta */
+/* Estilização geral da página inicial permanece intacta */
 
-/* Estilos específicos da página Saiba Mais */
+/* Parte de cima do site */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+header.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background: white;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 150px 20px 100px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('hero-image.jpg') no-repeat center center/cover;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero a.btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.hero a.btn.saiba-mais {
+    color: #9b59ff;
+    border: 2px solid #9b59ff;
+    background: transparent;
+}
+
+.hero a.btn.hospede-agora {
+    color: #fff;
+    background: #9b59ff;
+    border: none;
+}
+
+.hero a.btn:hover {
+    opacity: 0.8;
+}
+
+/* Saiba Mais Específico */
 .saiba-mais-header {
     background-color: #000;
     color: #fff;
@@ -43,131 +124,15 @@
     line-height: 1.8;
 }
 
-/* Seção "Como Funciona" */
-.como-funciona {
-    padding: 80px 20px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-}
-
-.como-funciona h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #9b59ff;
-}
-
-.funciona-passo {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 40px;
-}
-
-.funciona-item {
-    background-color: #111;
-    color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.funciona-item:hover {
-    transform: scale(1.05);
-}
-
-.funciona-item img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.funciona-item h3 {
-    color: #9b59ff;
-    margin-bottom: 10px;
-}
-
-.funciona-item p {
-    color: #ddd;
-}
-
-/* Benefícios */
-.benefits-saiba-mais {
-    background-color: #000;
-    color: #fff;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.benefits-saiba-mais h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #9b59ff;
-}
-
-.benefits-saiba-mais-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.benefit-saiba-mais {
-    background-color: #111;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.benefit-saiba-mais:hover {
-    transform: scale(1.05);
-}
-
-.benefit-saiba-mais img {
-    width: 60px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.benefit-saiba-mais h3 {
-    color: #9b59ff;
-    margin-bottom: 10px;
-}
-
-.benefit-saiba-mais p {
-    color: #ddd;
-}
-
-/* Botão de ação */
-.saiba-mais-action {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.saiba-mais-action .btn {
-    padding: 15px 30px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    background-color: #9b59ff;
-    color: #fff;
-    border: none;
-}
-
-.saiba-mais-action .btn:hover {
-    opacity: 0.8;
-}
-
-/* Responsividade para Saiba Mais */
+/* Responsividade */
 @media (max-width: 768px) {
-    .funciona-passo,
-    .benefits-saiba-mais-grid {
-        grid-template-columns: 1fr;
+    .hero a.btn {
+        display: block;
+        margin: 10px auto;
+        max-width: 250px;
+    }
+
+    .quem-somos p {
+        font-size: 0.9rem;
     }
 }
