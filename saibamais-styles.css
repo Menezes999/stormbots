@@ -1,4 +1,4 @@
-/* Resetando estilos padrão */
+/* Resetando os estilos padrão */
 * {
     margin: 0;
     padding: 0;
@@ -7,41 +7,18 @@
 }
 
 body {
-    background-color: #000;  /* Cor de fundo preta */
-    color: #fff;  /* Texto branco */
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff; /* Texto branco */
     font-size: 16px;
 }
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
-header .logo img {
-    width: 50px;
-    height: auto;
-}
-
-.menu-toggle {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    width: 20px;
-    height: 3px;
-    margin: 3px 0;
-    background-color: #fff;
+h1, h2 {
+    font-family: 'Helvetica', sans-serif;
 }
 
 /* Hero Section */
@@ -81,78 +58,107 @@ header .logo img {
     margin: 20px 0;
 }
 
-.hero-content h1, .hero-content p {
-    transition: transform 0.5s ease-out;
+/* Botão de rolagem */
+.scroll-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
 }
 
-.hero-content:hover h1, .hero-content:hover p {
-    transform: translateY(-10px);
+.scroll-btn button {
+    background-color: #9b59ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* About Section */
+.scroll-btn button:hover {
+    background-color: #6a39cc;
+}
+
+/* Animações de deslizamento */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplicando animação para cada item */
+.animate-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Sobre (About) Section */
 .about {
-    background-color: #111;
-    padding: 50px 0;
-    text-align: center;
+    padding: 80px 20px;
+    background-color: #222;
+    color: #fff;
 }
 
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #9b59ff;
 }
 
 .about p {
     font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    line-height: 1.6;
 }
 
-/* How It Works Section */
+/* Como Funciona Section */
 .how-it-works {
-    padding: 50px 20px;
-    background-color: #222;
+    padding: 80px 20px;
+    background-color: #333;
 }
 
 .how-it-works h2 {
     font-size: 2.5rem;
-    text-align: center;
-    color: #9b59ff;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .steps {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 30px;
-    flex-wrap: wrap;
 }
 
 .step {
-    background-color: #333;
+    background-color: #444;
     padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    flex-basis: 30%;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.step:hover {
+    background-color: #9b59ff;
 }
 
 .step h3 {
     font-size: 1.8rem;
-    color: #9b59ff;
+    margin-bottom: 10px;
 }
 
 .step p {
-    font-size: 1rem;
-    color: #ddd;
-    margin-top: 10px;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #000;
-    color: #fff;
+    background-color: #222;
 }
 
 footer p {
@@ -161,20 +167,23 @@ footer p {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .steps {
-        flex-direction: column;
-    }
-
-    .step {
-        flex-basis: 100%;
-        margin-bottom: 20px;
-    }
-
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero-content p {
         font-size: 1rem;
+    }
+
+    .steps {
+        gap: 20px;
+    }
+
+    .step {
+        padding: 15px;
+    }
+
+    .step h3 {
+        font-size: 1.5rem;
     }
 }
