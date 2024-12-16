@@ -26,8 +26,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
-    background-color: transparent; /* Transparente */
+    padding: 10px 50px;
+    background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -36,7 +36,7 @@ header {
 }
 
 header .logo img {
-    width: 100px; /* Ajuste final do tamanho */
+    width: 50px; /* Mesmo tamanho da página inicial */
     height: auto;
 }
 
@@ -63,6 +63,7 @@ header .logo img {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: -10px; /* Remove o espaço extra acima da página */
 }
 
 .hero-overlay {
@@ -162,7 +163,7 @@ footer p {
     }
 
     header .logo img {
-        width: 80px;
+        width: 40px; /* Redimensiona em telas menores */
     }
 
     .menu-toggle .bar {
