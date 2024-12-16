@@ -36,7 +36,7 @@ header {
 }
 
 header .logo img {
-    width: 120px; /* Tamanho ajustado da logo */
+    width: 100px; /* Ajuste final do tamanho */
     height: auto;
 }
 
@@ -101,41 +101,54 @@ header .logo img {
 .scroll-btn button {
     background-color: transparent;
     color: #fff;
-    border: none;
-    font-size: 2rem;
+    border: 2px solid #fff;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 50%;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .scroll-btn button:hover {
-    color: #9b59ff; /* Muda para roxo ao passar o mouse */
+    color: #000;
+    background-color: #9b59ff; /* Muda para roxo ao passar o mouse */
+    border-color: #9b59ff;
 }
 
 /* Sobre Section */
 .about {
-    padding: 80px 20px;
+    padding: 100px 20px;
     background-color: #222;
+}
+
+.about .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #9b59ff;
 }
 
 .about p {
     font-size: 1.2rem;
     line-height: 1.6;
+    color: #ccc;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #222;
+    background-color: #111;
 }
 
 footer p {
     font-size: 1rem;
+    color: #777;
 }
 
 /* Responsividade */
@@ -154,5 +167,10 @@ footer p {
 
     .menu-toggle .bar {
         width: 20px;
+    }
+
+    .scroll-btn button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
     }
 }
