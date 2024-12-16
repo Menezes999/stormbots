@@ -1,177 +1,202 @@
-/* Seção "Quem somos" */
-.section-about {
-    padding: 50px 20px;
-    background: #111;
-    text-align: center;
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;  /* Cor de fundo preta */
+    color: #fff;  /* Texto branco */
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
     color: #fff;
-    border-bottom: 2px solid #9b59ff; /* Linha sutil para separação */
 }
 
-.section-about h2 {
-    font-size: 3rem;
-    color: #9b59ff;
-    margin-bottom: 30px;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+h1, h2 {
+    font-family: 'Helvetica', sans-serif;
 }
 
-.section-about p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 900px;
-    margin: 0 auto;
-    color: #ccc;
-    padding: 0 10px;
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: transparent;  /* Fundo transparente */
+    position: fixed;  /* Fixa a parte de cima */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Z-index alto para garantir que fique sobre outras seções */
 }
 
-/* Seção "Como funciona" */
-.section-how {
-    padding: 60px 20px;
-    background: #111;
-    color: #fff;
-    text-align: center;
+header .logo img {
+    width: 50px;
+    height: auto;
 }
 
-.section-how h2 {
-    font-size: 3rem;
-    color: #9b59ff;
-    margin-bottom: 40px;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-.section-how .steps {
+.menu-toggle .bar {
+    width: 20px;
+    height: 3px;
+    margin: 3px 0;
+    background-color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('hero-graphic.png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);  /* Cor preta com opacidade */
+    z-index: 0;
+}
+
+.hero-content {
+    max-width: 80%;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hero-buttons .btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #9b59ff;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #9b59ff;
+    transition: background-color 0.3s;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #9b59ff;
+    color: #fff;
+}
+
+.hero-buttons .btn.purple {
+    background-color: #9b59ff;  /* Botão roxo */
+    color: #fff;
+    border: none;
+}
+
+.hero-buttons .btn.purple:hover {
+    background-color: #6a39cc;  /* Roxo mais escuro ao passar o mouse */
+}
+
+/* Seção Sobre a StormBots */
+.section-about,
+.section-how {
+    padding: 60px 50px;
+    text-align: center;
+    background-color: #111;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
     flex-wrap: wrap;
-    gap: 30px;
 }
 
 .step {
-    flex: 1;
-    min-width: 280px;
     max-width: 300px;
     text-align: center;
-    background: #1a1a1a;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.step:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(155, 89, 255, 0.4);
 }
 
 .step img {
     width: 100px;
-    height: auto;
     margin-bottom: 20px;
-    filter: drop-shadow(0 0 10px rgba(155, 89, 255, 0.7));
 }
 
-.step h3 {
-    font-size: 1.8rem;
-    margin: 15px 0;
-    color: #9b59ff;
-}
-
-.step p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ccc;
-}
-
-/* Seção "Benefícios" */
-.section-benefits {
-    padding: 60px 20px;
-    background: #111;
-    color: #fff;
+/* Footer */
+footer {
     text-align: center;
-}
-
-.section-benefits h2 {
-    font-size: 3rem;
-    color: #9b59ff;
-    margin-bottom: 40px;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
-
-.benefits-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.benefit {
-    flex: 1;
-    min-width: 280px;
-    max-width: 300px;
-    text-align: center;
-    background: #1a1a1a;
-    border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    background-color: #000;
 }
 
-.benefit:hover {
-    transform: scale(1.05);
-    background-color: #222;
-    box-shadow: 0 8px 16px rgba(155, 89, 255, 0.4);
-}
-
-.benefit img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 0 10px rgba(155, 89, 255, 0.7));
-}
-
-.benefit h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #9b59ff;
-}
-
-.benefit p {
+footer p {
     font-size: 1rem;
-    line-height: 1.6;
-    color: #ccc;
 }
 
-/* Botão Global */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 30px;
-    background: linear-gradient(to right, #6a39cc, #9b59ff);
+/* Side Drawer */
+.side-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;  /* Escondido inicialmente */
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);  /* Fundo preto com leve transparência */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    transition: right 0.3s ease;
+}
+
+.side-drawer.open {
+    right: 0;  /* Aparece ao abrir */
+}
+
+.side-drawer .close-btn {
+    font-size: 2rem;
     color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    transition: all 0.3s;
+    cursor: pointer;
+    text-align: right;
+    padding: 10px;
 }
 
-.btn:hover {
-    background: linear-gradient(to right, #9b59ff, #6a39cc);
-    transform: scale(1.05);
+.side-drawer-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-drawer-content a {
+    color: #9b59ff;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .section-about p,
-    .section-how p,
-    .section-benefits p {
-        font-size: 1rem;
-    }
-
-    .steps, .benefits-list {
+    .hero-buttons {
         flex-direction: column;
-        align-items: center;
     }
 }
