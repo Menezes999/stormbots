@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospede Agora - StormBots</title>
+    <link rel="stylesheet" href="hospedeagora.css">  <!-- CSS específico para a página -->
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo StormBots">
+        </div>
+        <div class="menu-toggle" onclick="toggleDrawer()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- Gaveta Lateral -->
+    <div class="side-drawer" id="side-drawer">
+        <div class="close-btn" onclick="toggleDrawer()">×</div>
+        <div class="side-drawer-content">
+            <a href="index.html">Início</a>
+            <a href="saibamais.html">Saiba Mais</a>
+            <a href="hospedeagora.html">Hospede Agora</a>
+        </div>
+    </div>
+
+    <!-- Seção de Hospedagem -->
+    <section class="hosting">
+        <div class="hosting-content">
+            <h1>Escolha o Melhor Plano para Hospedar seu Bot</h1>
+            <p>Com a StormBots, você tem opções de planos flexíveis para atender às suas necessidades. Veja os tipos de planos que oferecemos e escolha o ideal para você!</p>
+
+            <div class="plans">
+                <!-- Plano 1 -->
+                <div class="plan">
+                    <h2>Plano Básico</h2>
+                    <p class="price">R$ 19,99/mês</p>
+                    <ul>
+                        <li>Até 1 Bot</li>
+                        <li>500MB de Memória</li>
+                        <li>Suporte Básico</li>
+                        <li>Hospedagem Rápida e Segura</li>
+                    </ul>
+                    <a href="comprar.html" class="btn purple">Comprar</a>
+                </div>
+
+                <!-- Plano 2 -->
+                <div class="plan">
+                    <h2>Plano Intermediário</h2>
+                    <p class="price">R$ 39,99/mês</p>
+                    <ul>
+                        <li>Até 3 Bots</li>
+                        <li>1GB de Memória</li>
+                        <li>Suporte Prioritário</li>
+                        <li>Hospedagem Ultra Rápida</li>
+                    </ul>
+                    <a href="comprar.html" class="btn purple">Comprar</a>
+                </div>
+
+                <!-- Plano 3 -->
+                <div class="plan">
+                    <h2>Plano Avançado</h2>
+                    <p class="price">R$ 69,99/mês</p>
+                    <ul>
+                        <li>Até 5 Bots</li>
+                        <li>2GB de Memória</li>
+                        <li>Suporte 24/7</li>
+                        <li>Hospedagem Premium</li>
+                    </ul>
+                    <a href="comprar.html" class="btn purple">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 StormBots. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Referência ao JavaScript -->
+    <script>
+        // Função para alternar a gaveta lateral
+        function toggleDrawer() {
+            const drawer = document.getElementById('side-drawer');
+            drawer.classList.toggle('open');
+        }
+    </script>
+</body>
+
+</html>
