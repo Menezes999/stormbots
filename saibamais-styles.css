@@ -1,0 +1,180 @@
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;  /* Cor de fundo preta */
+    color: #fff;  /* Texto branco */
+    font-size: 16px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo img {
+    width: 50px;
+    height: auto;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 20px;
+    height: 3px;
+    margin: 3px 0;
+    background-color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('hero-graphic.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.hero-content {
+    max-width: 80%;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.hero-content h1, .hero-content p {
+    transition: transform 0.5s ease-out;
+}
+
+.hero-content:hover h1, .hero-content:hover p {
+    transform: translateY(-10px);
+}
+
+/* About Section */
+.about {
+    background-color: #111;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #9b59ff;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 50px 20px;
+    background-color: #222;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #9b59ff;
+    margin-bottom: 30px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex-basis: 30%;
+}
+
+.step h3 {
+    font-size: 1.8rem;
+    color: #9b59ff;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .steps {
+        flex-direction: column;
+    }
+
+    .step {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
