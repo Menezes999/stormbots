@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="saibamais-styles.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
     <header>
         <div class="logo">
             <img src="logo.png" alt="StormBots Logo">
@@ -19,35 +18,55 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Saiba Mais Sobre a StormBots</h1>
-            <p>Descubra como nossa plataforma de hospedagem de bots pode melhorar a automação do seu servidor Discord.</p>
-        </div>
-        <!-- Botão de rolar -->
-        <div class="scroll-btn">
-            <button onclick="scrollToContent()">▼</button>
-        </div>
-    </section>
+    <div class="scroll-btn">
+        <button onclick="scrollDown()">↓</button>
+    </div>
 
-    <!-- Seções de Conteúdo -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2>O Que Somos</h2>
-            <p>A StormBots oferece hospedagem de bots para o Discord com foco total em automação e qualidade de serviços.</p>
-        </div>
-    </section>
+    <main>
+        <section class="about">
+            <h1>O que somos</h1>
+            <p>A StormBots é a única plataforma especializada em hospedagem de bots para BDScript no Discord, com serviços gratuitos e suporte dedicado.</p>
+        </section>
 
-    <!-- Footer -->
+        <section class="how-it-works">
+            <h1>Como funciona?</h1>
+            <div class="steps">
+                <div class="step">
+                    <h2>Passo 1</h2>
+                    <p>Crie seu bot utilizando a linguagem BDScript e prepare-se para automação.</p>
+                </div>
+                <div class="step">
+                    <h2>Passo 2</h2>
+                    <p>Hospede o seu bot conosco e garanta segurança e rapidez na execução.</p>
+                </div>
+                <div class="step">
+                    <h2>Passo 3</h2>
+                    <p>Automatize o seu servidor Discord com eficiência e praticidade.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h1>Benefícios</h1>
+            <ul>
+                <li>Hospedagem 100% gratuita.</li>
+                <li>Configuração fácil e rápida.</li>
+                <li>Suporte técnico especializado.</li>
+                <li>Segurança de ponta para seus dados.</li>
+            </ul>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2024 StormBots. Todos os direitos reservados.</p>
+        <p>© 2024 StormBots. Todos os direitos reservados.</p>
     </footer>
 
     <script>
-        function scrollToContent() {
-            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        function scrollDown() {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
         }
     </script>
 </body>
