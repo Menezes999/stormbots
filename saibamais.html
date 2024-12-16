@@ -18,6 +18,7 @@
         </div>
     </header>
 
+    <!-- Botão para descer a página -->
     <div class="scroll-btn">
         <button onclick="scrollDown()">↓</button>
     </div>
@@ -63,10 +64,8 @@
 
     <script>
         function scrollDown() {
-            window.scrollTo({
-                top: window.innerHeight,
-                behavior: 'smooth'
-            });
+            const main = document.querySelector("main");
+            main.scrollIntoView({ behavior: "smooth" });
         }
     </script>
 </body>
