@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>StormBots</title>
+    <title>StormBots - Hospedagem de Bots Discord</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Header -->
     <header>
         <div class="logo">
@@ -27,26 +28,59 @@
             <h1>Hospede seu bot BDScript</h1>
             <p>A única hospedagem de BDScript do Discord!</p>
             <div class="hero-buttons">
-                <a href="saibamais.html" class="btn">Saiba mais</a>
-                <a href="#host-now" class="btn purple">Hospede agora</a>
+                <a href="#saibamais" class="btn">Saiba Mais</a>
+                <a href="#hospedeagora" class="btn purple">Hospede agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre a StormBots -->
+    <section id="saibamais" class="section-about">
+        <h2>O que somos</h2>
+        <p>A StormBots é a plataforma que oferece hospedagem de bots do Discord, com foco total na automação e qualidade de serviços para nossos clientes.</p>
+    </section>
+
+    <!-- Como funciona -->
+    <section id="como-funciona" class="section-how">
+        <h2>Como funciona?</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="step1.png" alt="Passo 1">
+                <h3>Crie seu Bot</h3>
+                <p>Crie seu bot utilizando a linguagem BDScript e prepare-se para automação.</p>
+            </div>
+            <div class="step">
+                <img src="step2.png" alt="Passo 2">
+                <h3>Hospede na StormBots</h3>
+                <p>Faça o upload do seu bot e hospede ele na nossa plataforma com rapidez e segurança.</p>
+            </div>
+            <div class="step">
+                <img src="step3.png" alt="Passo 3">
+                <h3>Comece a automatizar</h3>
+                <p>Deixe a automação do seu servidor Discord fluir com a hospedagem eficiente que oferecemos.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 StormBots. Todos os direitos reservados.</p>
+        <p>&copy; 2024 StormBots. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Side Drawer -->
-    <div id="sideDrawer" class="side-drawer">
-        <div class="close-btn" onclick="toggleDrawer()">×</div>
+    <!-- Side Drawer (Gaveta Lateral) -->
+    <div class="side-drawer" id="sideDrawer">
+        <div class="close-btn" onclick="toggleDrawer()">X</div>
         <div class="side-drawer-content">
-            <a href="#">Início</a>
-            <a href="#host-now">Hospede Agora</a>
+            <a href="#saibamais">O que somos</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#hospedeagora">Hospede agora</a>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleDrawer() {
+            document.getElementById('sideDrawer').classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
