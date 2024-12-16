@@ -12,6 +12,3 @@ document.addEventListener('DOMContentLoaded', () => {
         sideDrawer.classList.remove('open');
     });
 });
-document.addEventListener("contextmenu", function(e) {
-    e.preventDefault(); // Desabilita o menu de contexto
-});
