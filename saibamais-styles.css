@@ -58,7 +58,7 @@ h1, h2 {
     margin: 20px 0;
 }
 
-/* Botão de rolagem */
+/* Botão de rolar */
 .scroll-btn {
     position: absolute;
     bottom: 20px;
@@ -68,18 +68,16 @@ h1, h2 {
 }
 
 .scroll-btn button {
-    background-color: #9b59ff;
+    background-color: transparent;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 5px;
+    font-size: 2rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .scroll-btn button:hover {
-    background-color: #6a39cc;
+    color: #9b59ff; /* Muda para a cor roxa ao passar o mouse */
 }
 
 /* Animações de deslizamento */
