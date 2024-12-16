@@ -133,6 +133,7 @@ header .logo img {
     border-radius: 5px;
     border: 2px solid #9b59ff;
     transition: background-color 0.3s;
+    text-decoration: none; /* Remover sublinhado */
 }
 
 .hero-buttons .btn:hover {
