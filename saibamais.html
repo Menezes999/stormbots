@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saiba Mais - StormBots</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="StormBots Logo">
+        </div>
+        <div class="menu-toggle" onclick="toggleDrawer()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- Introdução -->
+    <section class="intro">
+        <div class="intro-content">
+            <h1>Conheça a StormBots</h1>
+            <p>Somos a única hospedagem gratuita e exclusiva para bots criados em BDScript no Discord. Aqui, você encontra segurança, desempenho e suporte de alto nível!</p>
+        </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section class="how-it-works">
+        <h2>Como Funciona</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="step1.png" alt="Crie seu bot">
+                <h3>Crie seu Bot</h3>
+                <p>Desenvolva seu bot em BDScript utilizando as ferramentas que você já conhece.</p>
+            </div>
+            <div class="step">
+                <img src="step2.png" alt="Envie para hospedagem">
+                <h3>Envie para Hospedagem</h3>
+                <p>Cadastre-se e envie os arquivos do seu bot para nossa plataforma.</p>
+            </div>
+            <div class="step">
+                <img src="step3.png" alt="Ative o bot">
+                <h3>Ative o Bot</h3>
+                <p>Ative seu bot com apenas um clique e veja-o rodar em nossa infraestrutura.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="benefits">
+        <h2>Por que escolher StormBots?</h2>
+        <div class="benefits-grid">
+            <div class="benefit">
+                <img src="support.png" alt="Suporte Especializado">
+                <h3>Suporte Especializado</h3>
+                <p>Equipe pronta para ajudar com dúvidas e problemas técnicos.</p>
+            </div>
+            <div class="benefit">
+                <img src="uptime.png" alt="Alta Disponibilidade">
+                <h3>Alta Disponibilidade</h3>
+                <p>Infraestrutura robusta que garante 99.9% de uptime para o seu bot.</p>
+            </div>
+            <div class="benefit">
+                <img src="easy.png" alt="Facilidade de Uso">
+                <h3>Facilidade de Uso</h3>
+                <p>Painel de controle intuitivo para você gerenciar tudo com facilidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 StormBots. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Side Drawer -->
+    <div id="sideDrawer" class="side-drawer">
+        <div class="close-btn" onclick="toggleDrawer()">×</div>
+        <div class="side-drawer-content">
+            <a href="index.html">Início</a>
+            <a href="saibamais.html">Saiba Mais</a>
+            <a href="#host-now">Hospede Agora</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
