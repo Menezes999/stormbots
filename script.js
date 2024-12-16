@@ -1,5 +1,4 @@
-// Função para abrir e fechar a gaveta lateral
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const sideDrawer = document.querySelector('.side-drawer');
     const closeBtn = document.querySelector('.close-btn');
