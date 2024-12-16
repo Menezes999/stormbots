@@ -44,32 +44,6 @@ header .logo img {
     background-color: #fff;
 }
 
-/* Botão de scroll */
-.scroll-btn {
-    position: fixed;
-    bottom: 85%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 500;
-}
-
-.scroll-btn button {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.scroll-btn button:hover {
-    background-color: #9b59ff;
-    border-color: #9b59ff;
-    color: #fff;
-}
-
 /* Seções */
 main {
     margin-top: 100px;
