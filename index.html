@@ -3,56 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>StormBots - Hospedagem de Bots Discord</title>
+    <title>StormBots - Página Inicial</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
-
-    <!-- Header -->
+    <!-- Cabeçalho -->
     <header>
         <div class="logo">
             <img src="logo.png" alt="StormBots Logo">
         </div>
-        <div class="menu-toggle" onclick="toggleDrawer()">
+        <div class="menu-toggle">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Gaveta Lateral -->
+    <div class="side-drawer">
+        <div class="close-btn">&times;</div>
+        <div class="side-drawer-content">
+            <a href="index.html">Início</a>
+            <a href="saibamais.html">Saiba Mais</a>
+            <a href="hospedeagora.html">Hospede Agora</a>
+        </div>
+    </div>
+
+    <!-- Seção Hero -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Hospede seu bot BDScript</h1>
-            <p>A única hospedagem de BDScript do Discord!</p>
+            <h1>Hospedagem de Bots para Discord</h1>
+            <p>Com StormBots, hospede seu bot rapidamente e de forma segura.</p>
             <div class="hero-buttons">
+                <a href="hospedeagora.html" class="btn purple">Hospede Agora</a>
                 <a href="saibamais.html" class="btn">Saiba Mais</a>
-                <a href="#hospedeagora" class="btn purple">Hospede agora</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 StormBots. Todos os direitos reservados.</p>
+        <p>© 2024 StormBots. Todos os direitos reservados.</p>
     </footer>
-
-    <!-- Side Drawer (Gaveta Lateral) -->
-    <div class="side-drawer" id="sideDrawer">
-        <div class="close-btn" onclick="toggleDrawer()">X</div>
-        <div class="side-drawer-content">
-            <a href="#saibamais">O que somos</a>
-            <a href="#como-funciona">Como funciona</a>
-            <a href="#hospedeagora">Hospede agora</a>
-        </div>
-    </div>
-
-    <script>
-        function toggleDrawer() {
-            document.getElementById('sideDrawer').classList.toggle('open');
-        }
-    </script>
 </body>
 </html>
