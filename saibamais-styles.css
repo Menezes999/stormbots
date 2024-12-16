@@ -44,12 +44,13 @@ header .logo img {
     background-color: #fff;
 }
 
-/* Botão de rolar */
+/* Botão de descer */
 .scroll-btn {
-    position: absolute;
-    bottom: 50%; /* Ajustado para aparecer logo ao entrar */
+    position: fixed;
+    bottom: 80%;
     left: 50%;
     transform: translate(-50%, 50%);
+    z-index: 500;
 }
 
 .scroll-btn button {
@@ -57,7 +58,7 @@ header .logo img {
     color: #fff;
     border: 2px solid #fff;
     padding: 10px 15px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -71,7 +72,7 @@ header .logo img {
 
 /* Seções */
 main {
-    padding-top: 100px;
+    margin-top: 100px;
 }
 
 .about, .how-it-works, .benefits {
@@ -129,5 +130,9 @@ footer {
 
     .step {
         width: 80%;
+    }
+
+    .scroll-btn {
+        bottom: 90%;
     }
 }
