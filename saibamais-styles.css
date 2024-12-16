@@ -1,4 +1,4 @@
-/* Resetando estilos padrão */
+/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
@@ -18,11 +18,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
 }
 
@@ -44,12 +44,12 @@ header .logo img {
     background-color: #fff;
 }
 
-/* Botão de descer */
+/* Botão de scroll */
 .scroll-btn {
     position: fixed;
-    bottom: 80%;
+    bottom: 85%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translateX(-50%);
     z-index: 500;
 }
 
@@ -57,7 +57,7 @@ header .logo img {
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-size: 1.5rem;
     border-radius: 50%;
     cursor: pointer;
@@ -65,9 +65,9 @@ header .logo img {
 }
 
 .scroll-btn button:hover {
-    color: #000;
     background-color: #9b59ff;
     border-color: #9b59ff;
+    color: #fff;
 }
 
 /* Seções */
@@ -75,26 +75,31 @@ main {
     margin-top: 100px;
 }
 
-.about, .how-it-works, .benefits {
-    padding: 50px 20px;
+section {
+    padding: 60px 20px;
     text-align: center;
 }
 
+section .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .about h1, .how-it-works h1, .benefits h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #9b59ff;
 }
 
 .about p, .how-it-works p, .benefits ul {
     font-size: 1.2rem;
-    color: #bbb;
+    color: #ccc;
 }
 
 .steps {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -103,10 +108,16 @@ main {
     border-radius: 10px;
     padding: 20px;
     width: 250px;
+    transition: transform 0.3s;
+}
+
+.step:hover {
+    transform: translateY(-10px);
 }
 
 .benefits ul {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
 }
 
 .benefits ul li {
@@ -119,6 +130,7 @@ footer {
     padding: 20px;
     background-color: #111;
     color: #777;
+    margin-top: 50px;
 }
 
 /* Responsividade */
@@ -130,9 +142,5 @@ footer {
 
     .step {
         width: 80%;
-    }
-
-    .scroll-btn {
-        bottom: 90%;
     }
 }
