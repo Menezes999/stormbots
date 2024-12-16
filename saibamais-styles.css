@@ -7,9 +7,21 @@
 }
 
 body {
-    background-color: #000;
+    background: url('hero-graphic.png') no-repeat center center/cover; /* Fundo com imagem */
     color: #fff;
     font-size: 16px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Escurecendo a imagem */
+    z-index: -1;
 }
 
 /* Header */
@@ -44,6 +56,44 @@ header .logo img {
     background-color: #fff;
 }
 
+/* Gaveta Lateral */
+.side-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Escondido inicialmente */
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    transition: right 0.3s ease;
+}
+
+.side-drawer.open {
+    right: 0; /* Aparece ao abrir */
+}
+
+.side-drawer .close-btn {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    text-align: right;
+    padding: 10px;
+}
+
+.side-drawer-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-drawer-content a {
+    color: #9b59ff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 /* Seções */
 main {
     margin-top: 100px;
@@ -52,22 +102,13 @@ main {
 section {
     padding: 60px 20px;
     text-align: center;
-}
-
-section .content {
-    max-width: 800px;
-    margin: 0 auto;
+    color: #fff;
 }
 
 .about h1, .how-it-works h1, .benefits h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #9b59ff;
-}
-
-.about p, .how-it-works p, .benefits ul {
-    font-size: 1.2rem;
-    color: #ccc;
 }
 
 .steps {
