@@ -21,6 +21,38 @@ h1, h2 {
     font-family: 'Helvetica', sans-serif;
 }
 
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: transparent;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo img {
+    width: 100px; /* Ajusta o tamanho da logo */
+    height: auto;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 20px;
+    height: 3px;
+    margin: 3px 0;
+    background-color: #fff;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -31,6 +63,7 @@ h1, h2 {
     align-items: center;
     color: #fff;
     text-align: center;
+    margin-top: 80px; /* Ajuste para evitar sobreposição com o header */
 }
 
 .hero-overlay {
