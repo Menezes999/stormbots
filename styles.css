@@ -120,37 +120,6 @@ header .logo img {
     background-color: #6a39cc;  /* Roxo mais escuro ao passar o mouse */
 }
 
-/* Benefícios */
-.benefits {
-    padding: 50px 20px;
-    background-color: #000;  /* Fundo preto */
-    text-align: center;
-}
-
-.benefits h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
-.benefits .benefit-item {
-    margin-bottom: 30px;
-}
-
-.benefits .benefit-item img {
-    max-width: 150px;
-    margin-bottom: 20px;
-}
-
-.benefits .benefit-item h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.benefits .benefit-item p {
-    font-size: 1.2rem;
-    color: #ccc;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -160,6 +129,44 @@ footer {
 
 footer p {
     font-size: 1rem;
+}
+
+/* Side Drawer */
+.side-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;  /* Escondido inicialmente */
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);  /* Fundo preto com leve transparência */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    transition: right 0.3s ease;
+}
+
+.side-drawer.open {
+    right: 0;  /* Aparece ao abrir */
+}
+
+.side-drawer .close-btn {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    text-align: right;
+    padding: 10px;
+}
+
+.side-drawer-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-drawer-content a {
+    color: #9b59ff;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* Responsividade */
