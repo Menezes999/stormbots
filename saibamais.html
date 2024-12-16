@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="saibamais-styles.css">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
         <div class="logo">
             <img src="logo.png" alt="StormBots Logo">
@@ -25,7 +26,6 @@
             <h1>Saiba Mais Sobre a StormBots</h1>
             <p>Descubra como nossa plataforma de hospedagem de bots pode melhorar a automação do seu servidor Discord.</p>
         </div>
-        
         <!-- Botão de rolar -->
         <div class="scroll-btn">
             <button onclick="scrollToContent()">▼</button>
@@ -35,28 +35,8 @@
     <!-- Seções de Conteúdo -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="animate-left">O Que Somos</h2>
-            <p class="animate-left">A StormBots oferece hospedagem de bots para o Discord com foco total em automação e qualidade de serviços.</p>
-        </div>
-    </section>
-
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <h2 class="animate-left">Como Funciona?</h2>
-            <div class="steps">
-                <div class="step animate-left">
-                    <h3>Passo 1</h3>
-                    <p>Crie seu bot utilizando a linguagem BDScript e prepare-se para automação.</p>
-                </div>
-                <div class="step animate-left">
-                    <h3>Passo 2</h3>
-                    <p>Hospede seu bot na StormBots com rapidez e segurança.</p>
-                </div>
-                <div class="step animate-left">
-                    <h3>Passo 3</h3>
-                    <p>Deixe a automação do seu servidor Discord fluir de forma eficiente.</p>
-                </div>
-            </div>
+            <h2>O Que Somos</h2>
+            <p>A StormBots oferece hospedagem de bots para o Discord com foco total em automação e qualidade de serviços.</p>
         </div>
     </section>
 
@@ -65,10 +45,8 @@
         <p>&copy; 2024 StormBots. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
     <script>
         function scrollToContent() {
-            // Rolagem suave para a próxima seção
             document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
