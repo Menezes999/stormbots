@@ -1,68 +1,66 @@
-/* Resetando estilos padrão */
+/* Reset padrão */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #000;  /* Cor de fundo preta */
-    color: #fff;  /* Texto branco */
-    font-size: 16px;
-}
-
-a {
-    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
     color: #fff;
-}
-
-h1, h2 {
-    font-family: 'Helvetica', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: transparent;  /* Fundo transparente */
-    position: fixed;  /* Fixa a parte de cima */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;  /* Z-index alto para garantir que fique sobre outras seções */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
-header .logo img {
-    width: 50px;
-    height: auto;
+header.sticky {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo img {
+    width: 150px;
 }
 
 .menu-toggle {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
     cursor: pointer;
 }
 
 .menu-toggle .bar {
-    width: 20px;
+    width: 100%;
     height: 3px;
-    margin: 3px 0;
     background-color: #fff;
 }
 
 /* Hero Section */
 .hero {
     position: relative;
+    background: url('hero.jpg') no-repeat center center/cover;
     height: 100vh;
-    background: url('hero-graphic.png') no-repeat center center/cover;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: #fff;
+    justify-content: center;
     text-align: center;
+    padding: 0 20px;
 }
 
 .hero-overlay {
@@ -71,107 +69,230 @@ header .logo img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);  /* Cor preta com opacidade */
-    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .hero-content {
-    max-width: 80%;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
+    color: #fff;
 }
 
 .hero-content h1 {
     font-size: 3rem;
+    margin-bottom: 20px;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin: 20px 0;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.hero-buttons .btn {
-    padding: 10px 20px;
-    background-color: transparent;
-    color: #9b59ff;
-    font-weight: bold;
+.hero-content .btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
     border-radius: 5px;
     border: 2px solid #9b59ff;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 0 10px;
 }
 
-.hero-buttons .btn:hover {
+.hero-content .btn.transparent {
+    background-color: transparent;
+    color: #9b59ff;
+}
+
+.hero-content .btn.purple {
     background-color: #9b59ff;
     color: #fff;
 }
 
-.hero-buttons .btn.purple {
-    background-color: #9b59ff;  /* Botão roxo */
-    color: #fff;
-    border: none;
+.hero-content .btn:hover {
+    opacity: 0.8;
 }
 
-.hero-buttons .btn.purple:hover {
-    background-color: #6a39cc;  /* Roxo mais escuro ao passar o mouse */
+/* Introdução */
+.intro {
+    background-color: #111;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Como Funciona */
+.how-it-works {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #9b59ff;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.step {
+    max-width: 300px;
+    background-color: #111;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.step:hover {
+    transform: scale(1.05);
+}
+
+.step img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    color: #9b59ff;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #ddd;
+}
+
+/* Benefícios */
+.benefits {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.benefits h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #9b59ff;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.benefit {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.benefit:hover {
+    transform: scale(1.05);
+}
+
+.benefit img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.benefit h3 {
+    color: #9b59ff;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    color: #ddd;
 }
 
 /* Footer */
 footer {
+    background-color: #111;
     text-align: center;
     padding: 20px;
-    background-color: #000;  /* Fundo preto */
-}
-
-footer p {
-    font-size: 1rem;
+    color: #aaa;
+    font-size: 0.9rem;
 }
 
 /* Side Drawer */
 .side-drawer {
     position: fixed;
     top: 0;
-    right: -100%;  /* Escondido inicialmente */
+    right: -100%;
     width: 250px;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);  /* Fundo preto com leve transparência */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 1100;
+    height: 100%;
+    background-color: #000;
+    z-index: 2000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
     transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .side-drawer.open {
-    right: 0;  /* Aparece ao abrir */
+    right: 0;
 }
 
 .side-drawer .close-btn {
-    font-size: 2rem;
+    align-self: flex-end;
+    font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
-    text-align: right;
-    padding: 10px;
-}
-
-.side-drawer-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .side-drawer-content a {
-    color: #9b59ff;
-    font-size: 1.2rem;
-    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.side-drawer-content a:hover {
+    background-color: #9b59ff;
+    color: #fff;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .hero-buttons {
-        flex-direction: column;
+    .hero-content .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .steps,
+    .benefits-grid {
+        grid-template-columns: 1fr;
     }
 }
