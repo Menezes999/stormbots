@@ -120,31 +120,6 @@ header .logo img {
     background-color: #6a39cc;  /* Roxo mais escuro ao passar o mouse */
 }
 
-/* Seção Sobre a StormBots */
-.section-about,
-.section-how {
-    padding: 60px 50px;
-    text-align: center;
-    background-color: #111;
-}
-
-.steps {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.step {
-    max-width: 300px;
-    text-align: center;
-}
-
-.step img {
-    width: 100px;
-    margin-bottom: 20px;
-}
-
 /* Footer */
 footer {
     text-align: center;
