@@ -1,138 +1,298 @@
-/* Estilização geral da página inicial permanece intacta */
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
-/* Parte de cima do site */
+body {
+    background-color: #000;  /* Cor de fundo preta */
+    color: #fff;  /* Texto branco */
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1, h2 {
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Header */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background: transparent;
-    transition: background 0.3s ease;
+    padding: 20px 50px;
+    background-color: transparent;  /* Fundo transparente */
+    position: fixed;  /* Fixa a parte de cima */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Z-index alto para garantir que fique sobre outras seções */
 }
 
-header.scrolled {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.logo img {
-    max-height: 50px;
+header .logo img {
+    width: 50px;
+    height: auto;
 }
 
 .menu-toggle {
     display: flex;
     flex-direction: column;
-    gap: 5px;
     cursor: pointer;
 }
 
 .menu-toggle .bar {
-    width: 30px;
+    width: 20px;
     height: 3px;
-    background: white;
+    margin: 3px 0;
+    background-color: #fff;
 }
 
 /* Hero Section */
 .hero {
     position: relative;
-    text-align: center;
-    color: white;
-    padding: 150px 20px 100px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('hero-image.jpg') no-repeat center center/cover;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.hero a.btn {
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: 0.3s ease;
-}
-
-.hero a.btn.saiba-mais {
-    color: #9b59ff;
-    border: 2px solid #9b59ff;
-    background: transparent;
-}
-
-.hero a.btn.hospede-agora {
+    height: 100vh;
+    background: url('hero-graphic.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
-    background: #9b59ff;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);  /* Cor preta com opacidade */
+    z-index: 0;
+}
+
+.hero-content {
+    max-width: 80%;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.hero-buttons .btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #9b59ff;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #9b59ff;
+    transition: background-color 0.3s;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #9b59ff;
+    color: #fff;
+}
+
+.hero-buttons .btn.purple {
+    background-color: #9b59ff;  /* Botão roxo */
+    color: #fff;
     border: none;
 }
 
-.hero a.btn:hover {
-    opacity: 0.8;
+.hero-buttons .btn.purple:hover {
+    background-color: #6a39cc;  /* Roxo mais escuro ao passar o mouse */
 }
 
-/* Saiba Mais Específico */
-.saiba-mais-header {
-    background-color: #000;
-    color: #fff;
+/* Footer */
+footer {
     text-align: center;
-    padding: 100px 20px;
+    padding: 20px;
+    background-color: #000;  /* Fundo preto */
 }
 
-.saiba-mais-header h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #9b59ff;
-}
-
-.saiba-mais-header p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Seção "Quem Somos" */
-.quem-somos {
-    padding: 80px 20px;
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-}
-
-.quem-somos h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #9b59ff;
-}
-
-.quem-somos p {
+footer p {
     font-size: 1rem;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #ccc;
-    line-height: 1.8;
+}
+
+/* Side Drawer */
+.side-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;  /* Escondido inicialmente */
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);  /* Fundo preto com leve transparência */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    transition: right 0.3s ease;
+}
+
+.side-drawer.open {
+    right: 0;  /* Aparece ao abrir */
+}
+
+.side-drawer .close-btn {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    text-align: right;
+    padding: 10px;
+}
+
+.side-drawer-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-drawer-content a {
+    color: #9b59ff;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .hero a.btn {
-        display: block;
-        margin: 10px auto;
-        max-width: 250px;
+    .hero-buttons {
+        flex-direction: column;
     }
+}
 
-    .quem-somos p {
-        font-size: 0.9rem;
-    }
+/* Estilos específicos da página saibamais.html */
+
+/* Seção "Quem somos" */
+.section-about {
+    padding: 50px;
+    background-color: #111; /* Fundo mais escuro */
+    text-align: center;
+}
+
+.section-about h2 {
+    font-size: 2.5rem;
+    color: #9b59ff;
+    margin-bottom: 20px;
+}
+
+.section-about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+/* Seção "Como funciona" */
+.section-how {
+    padding: 50px;
+    background-color: #222; /* Fundo ainda mais escuro */
+}
+
+.section-how h2 {
+    font-size: 2.5rem;
+    color: #9b59ff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-how .steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.step {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    color: #ddd;
+}
+
+.step img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #9b59ff;
+}
+
+.step p {
+    font-size: 1rem;
+}
+
+/* Seção "Benefícios" */
+.section-benefits {
+    padding: 50px;
+    background-color: #111; /* Fundo preto */
+}
+
+.section-benefits h2 {
+    font-size: 2.5rem;
+    color: #9b59ff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.benefit {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.benefit:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+
+.benefit img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.benefit h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #9b59ff;
+}
+
+.benefit p {
+    font-size: 1rem;
+    line-height: 1.5;
 }
