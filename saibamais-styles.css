@@ -1,4 +1,4 @@
-/* Resetando os estilos padrão */
+/* Resetando estilos padrão */
 * {
     margin: 0;
     padding: 0;
@@ -12,22 +12,13 @@ body {
     font-size: 16px;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-h1, h2 {
-    font-family: 'Helvetica', sans-serif;
-}
-
 /* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: transparent; /* Mesmo estilo da página inicial */
+    background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -36,7 +27,7 @@ header {
 }
 
 header .logo img {
-    width: 50px; /* Tamanho igual ao da página inicial */
+    width: 50px;
     height: auto;
 }
 
@@ -47,55 +38,18 @@ header .logo img {
 }
 
 .menu-toggle .bar {
-    width: 20px; /* Igual à página inicial */
+    width: 20px;
     height: 3px;
     margin: 3px 0;
     background-color: #fff;
-    transition: 0.3s;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 100vh;
-    background: url('hero-graphic.png') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 0;
-}
-
-.hero-content {
-    max-width: 80%;
-    z-index: 1;
-    color: #fff;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin: 20px 0;
 }
 
 /* Botão de rolar */
 .scroll-btn {
     position: absolute;
-    bottom: 80px; /* Ajustado para ficar mais visível */
+    bottom: 50%; /* Ajustado para aparecer logo ao entrar */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50%);
 }
 
 .scroll-btn button {
@@ -111,32 +65,51 @@ header .logo img {
 
 .scroll-btn button:hover {
     color: #000;
-    background-color: #9b59ff; /* Muda para roxo ao passar o mouse */
+    background-color: #9b59ff;
     border-color: #9b59ff;
 }
 
-/* Sobre Section */
-.about {
-    padding: 100px 20px;
-    background-color: #222;
+/* Seções */
+main {
+    padding-top: 100px;
 }
 
-.about .container {
-    max-width: 900px;
-    margin: 0 auto;
+.about, .how-it-works, .benefits {
+    padding: 50px 20px;
     text-align: center;
 }
 
-.about h2 {
-    font-size: 2.5rem;
+.about h1, .how-it-works h1, .benefits h1 {
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #9b59ff;
 }
 
-.about p {
+.about p, .how-it-works p, .benefits ul {
     font-size: 1.2rem;
-    line-height: 1.6;
-    color: #ccc;
+    color: #bbb;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+}
+
+.benefits ul {
+    list-style-type: none;
+}
+
+.benefits ul li {
+    margin-bottom: 10px;
 }
 
 /* Footer */
@@ -144,33 +117,17 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #111;
-}
-
-footer p {
-    font-size: 1rem;
     color: #777;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
+    .steps {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    header .logo img {
-        width: 40px; /* Redimensiona em telas menores */
-    }
-
-    .menu-toggle .bar {
-        width: 20px;
-    }
-
-    .scroll-btn button {
-        font-size: 0.9rem;
-        padding: 8px 12px;
+    .step {
+        width: 80%;
     }
 }
