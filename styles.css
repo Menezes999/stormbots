@@ -22,7 +22,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Fundo mais escuro */
+    background-color: transparent; /* Cabeçalho transparente */
     z-index: 1000;
 }
 
@@ -80,7 +80,7 @@ header .logo img {
     color: #9b59ff;
     font-size: 1.2rem;
     font-weight: bold;
-    text-decoration: none; /* Retira o sublinhado */
+    text-decoration: none; /* Remove sublinhado */
 }
 
 /* Seção Hero */
